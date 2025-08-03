@@ -1,0 +1,84 @@
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(33, 37, 41, 0.95);
+        }
+
+        .navbar-brand .brand-text {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--accent-primary-light);
+            text-decoration: none;
+        }
+
+        body.dark-mode .navbar-brand .brand-text {
+            color: var(--accent-primary-dark);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-primary-light) !important;
+            margin: 0 0.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .nav-link {
+            color: var(--text-primary-dark) !important;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-primary-light) !important;
+        }
+
+        body.dark-mode .nav-link:hover {
+            color: var(--accent-primary-dark) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--accent-primary-light);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        body.dark-mode .nav-link::after {
+            background-color: var(--accent-primary-dark);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            border: none;
+            background: none;
+            font-size: 1.2rem;
+            color: var(--text-primary-light);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: var(--text-primary-dark);
+        }
+
+        .theme-toggle:hover {
+            color: var(--accent-primary-light);
+            transform: rotate(180deg);
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            color: var(--accent-primary-dark);
+        }
